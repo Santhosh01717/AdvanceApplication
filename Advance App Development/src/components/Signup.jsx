@@ -26,12 +26,11 @@ function Signup() {
       </div>
       <div className="field" style={{marginBottom: "15px"}}>
         <input placeholder='Email' type="text" required="" />
-        {/* <span className="fas fa-user" /> */}
         <label>Email</label>
       </div>
       <div className="field" style={{marginBottom: "15px"}}>
         <input placeholder='password' type="text" required="" />
-        {/* <span className="fas fa-user" /> */}
+
         <label>Password</label>
       </div>
       <div className="field" style={{marginBottom: "15px"}}>
