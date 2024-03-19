@@ -16,7 +16,6 @@ function LoginForm() {
     
   {/* Created By CodingNepal */}
   <meta charSet="utf-8" />
-  {/* <title>Neumorphism Login Form UI | CodingNepal</title> */}
   <link rel="stylesheet" href="style.css" />
   <link
     rel="stylesheet"
