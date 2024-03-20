@@ -5,6 +5,7 @@ import EventsList from './EventsList';
 import './AddEvent.css';
 import { useNavigate } from 'react-router-dom';
 import Nav from '../pages/Nav'
+import AdminSidebar from './AdminSidebar';
 function AddEventPage() {
   const [events, setEvents] = useState(() => {
     const storedEvents = localStorage.getItem('events');
@@ -52,6 +53,7 @@ const nav = useNavigate();
   return (
     <>
     {/* <Nav/> */}
+    <AdminSidebar />
     <div className="add-event-container">
       <div className="add-event-title">Add Event</div>
       <form className="add-event-form" onSubmit={handleSubmit}>

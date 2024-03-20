@@ -1,7 +1,7 @@
-// MyBookings.js
-
 import React from 'react';
 import './AllBookings.css';
+import { useNavigate } from 'react-router-dom';
+import AdminSidebar from './AdminSidebar';
 
 function AllBookings() {
   // Sample data for bookings
@@ -12,7 +12,7 @@ function AllBookings() {
       userName: 'John Doe',
       submissionDate: '2024-03-20',
       eventDate: '2024-03-25',
-      description: 'Lorem ipsum dolor sit amet',
+      description: 'event1',
       bookingStatus: 'Pending',
       eventType: 'Event A',
       headCount: 5,
@@ -24,7 +24,7 @@ function AllBookings() {
       userName: 'Alice Smith',
       submissionDate: '2024-03-22',
       eventDate: '2024-03-28',
-      description: 'Sed do eiusmod tempor.',
+      description: 'event2',
       bookingStatus: 'Confirmed',
       eventType: 'Event B',
       headCount: 3,
@@ -37,14 +37,17 @@ function AllBookings() {
     // Logic to delete booking with bookingId
     // console.log(Deleting booking with ID ${bookingId});
   };
+  const nav = useNavigate();
 
   const handleMakePayment = (bookingId) => {
     // Logic to make payment for booking with bookingId
     // console.log(Making payment for booking with ID ${bookingId});
+    nav("/payment")
   };
 
   return (
     <>
+    <AdminSidebar />
       <div className="t-container">
         <div className='header'>
           <h2>All Bookings</h2>
@@ -63,7 +66,7 @@ function AllBookings() {
               <th>Event Type</th>
               <th>Head Count</th>
               <th>Amount</th>
-              <th>Actions</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -75,16 +78,16 @@ function AllBookings() {
                 <td>{booking.submissionDate}</td>
                 <td>{booking.eventDate}</td>
                 <td>{booking.description}</td>
-                <td>{booking.bookingStatus}</td>
+                <td>
+                <select style={{borderRadius: "5px"}}>
+                   <option >Pending</option>
+                   <option >Verified</option>
+                </select>
+                </td>
                 <td>{booking.eventType}</td>
                 <td>{booking.headCount}</td>
                 <td>{booking.amount}</td>
-                <td>
-                  <div className='button-container'>
-                    <button className='th-button' onClick={() => handleDelete(booking.bookingId)}>Delete</button>
-                    <button className='th-button' onClick={() => handleMakePayment(booking.bookingId)}>Make Payment</button>
-                  </div>
-                </td>
+               
               </tr>
             ))}
           </tbody>

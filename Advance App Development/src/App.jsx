@@ -20,6 +20,8 @@ import UserDashboard from './pages/Dashboard'
 import Home from './pages/Home'
 import Cards from './pages/Cards'
 import AdminHome from './pages/AdminHome'
+import AdminLoginForm from './components/AdminLogin'
+import UserDashboard1 from './pages/Dashboard1'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,7 +30,9 @@ function App() {
      <BrowserRouter>
      <Routes>
       <Route path='/login' element={<Login/>}></Route>
+      <Route path='/adminlogin' element={<AdminLoginForm />}></Route> 
       <Route path='/signup' element={<Signup/>}></Route>
+      {/* <Route path='/adminsignup' element={<AdminSignup/>}></Route> */}
       <Route path='/add' element={<AddEventPage/>}></Route>
       <Route path='/view' element={<ViewEvent/>}></Route>
       <Route path='/userview' element={<UserView/>}></Route>
@@ -43,6 +47,7 @@ function App() {
       <Route path='/userallbookings' element={<UserAllBookings/>}></Route>
       <Route path='/' element={<AdminOrUser/>}></Route>
       <Route path='/dashboard' element={<UserDashboard/>}></Route>
+      <Route path='/admindashboard' element={<UserDashboard1/>}></Route>
       <Route path='/home1' element={<Home/>}></Route>
       <Route path='/home' element={<Cards/>}></Route>
       <Route path='/adminhome' element={<AdminHome/>}></Route>

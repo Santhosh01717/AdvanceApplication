@@ -14,13 +14,13 @@ function UserDashboard() {
 
  const nav = useNavigate();
   const handleBack = () =>{
-    nav("/home");
+    nav("/adminhome");
   }
 
   return (
     <div className='user-dash'>
       {/* <Sidebar /> */}
-      <Nav />
+      <AdminSidebar />
       <div className='user-dashboard'>
         <div className='top'>
           <h3 className='hello-user'>

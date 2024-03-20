@@ -1,18 +1,18 @@
-// MyBookings.js
-
 import React from 'react';
-import './AllBookings.css';
+import './AllBookings.css'; // You can define your CSS styles in PaymentList.css
+import { useNavigate } from 'react-router-dom';
+import Nav from './Nav'; // Import Nav component if needed
 
 function PaymentList() {
-  // Sample data for bookings
-  const bookings = [
+  // Sample data for payments
+  const payments = [
     {
       paymentId: 1,
       organizerId: 101,
       status: 'Pending',
       totalAmount: '$200',
-      amountPaid: '$100',
-      balance: '$100',
+      amountPaid: '$0',
+      balance: '$200',
       paymentDate: '2024-03-20',
       modeOfPayment: 'Credit Card',
     },
@@ -29,19 +29,22 @@ function PaymentList() {
     // Add more payments as needed
   ];
 
-  const handleDelete = (paymentId) => {
-    // Logic to delete payment with paymentId
-    // console.log(Deleting payment with ID ${paymentId});
+  const nav = useNavigate();
+
+  const handleViewDetails = (paymentId) => {
+    // Logic to navigate to payment details page for payment with paymentId
+    // nav(`/payment/${paymentId}`); // Example navigation
   };
 
   return (
     <>
-      <div className="container">
+      <Nav />
+      <div className="t-container">
         <div className='header'>
-          <h2>Payment history</h2>
+          <h2>Payment List</h2>
         </div>
 
-        <table style={{marginLeft: "-300px"}} className="booking-table">
+        <table className="payment-table">
           <thead>
             <tr>
               <th>Payment ID</th>
@@ -51,12 +54,11 @@ function PaymentList() {
               <th>Amount Paid</th>
               <th>Balance</th>
               <th>Payment Date</th>
-              <th>Mode Of Payment</th>
-              <th>Actions</th>
+              <th>Mode of Payment</th>
             </tr>
           </thead>
           <tbody>
-            {bookings.map((payment) => (
+            {payments.map((payment) => (
               <tr key={payment.paymentId}>
                 <td>{payment.paymentId}</td>
                 <td>{payment.organizerId}</td>
@@ -66,11 +68,11 @@ function PaymentList() {
                 <td>{payment.balance}</td>
                 <td>{payment.paymentDate}</td>
                 <td>{payment.modeOfPayment}</td>
-                <td>
+                {/* <td>
                   <div className='button-container'>
-                    <button className='th-button' onClick={() => handleDelete(payment.paymentId)}>Delete</button>
+                    <button className='th-button' onClick={() => handleViewDetails(payment.paymentId)}>View Details</button>
                   </div>
-                </td>
+                </td> */}
               </tr>
             ))}
           </tbody>

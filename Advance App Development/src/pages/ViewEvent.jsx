@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import EventsList from './EventsList';
 import './AddEvent.css';
+import AdminSidebar from './AdminSidebar';
 
 function AddEventPage() {
   const [events, setEvents] = useState(() => {
@@ -51,7 +52,8 @@ const handleDeleteAll = () =>{
 
   return (
     <>
-      <div className="add-event-title" style={{}}>Events</div>
+    <AdminSidebar />
+          <div className="add-event-title" style={{}}>Events</div>
       <EventsList events={events} />
       <button onClick={handleDeleteAll} style={{width: "100px",height:"30px",backgroundColor: "red",color: "white",marginTop:"40px",border: "none",borderRadius:"10px"}}>Delete All</button>
       

@@ -1,14 +1,15 @@
 import React from 'react';
 import './Login.css'; // Make sure to import your CSS file
 import Nav from '../pages/Nav';
-import { Link, useNavigate } from 'react-router-dom';
-function LoginForm() {
+import { useNavigate } from 'react-router-dom';
+
+function AdminLoginForm() {
   const nav = useNavigate();
   const handleLogin = () =>{
-        nav("/signup");
+        nav("/login");
   }
   const handleNav = () =>{
-        nav("/home");
+        nav("/adminhome");
   }
   return (
     <>
@@ -21,7 +22,7 @@ function LoginForm() {
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
   />
   <div className="content">
-    <div className="text">Organizer Login</div>
+    <div className="text">Admin Login</div>
     <form action="#">
       <div className="field">
         <input type="text" placeholder="Email Or Phone" required="" />
@@ -38,21 +39,14 @@ function LoginForm() {
       </div>
       <button className='log-button' onClick={handleNav}>Sign in</button>
       <div className="sign-up">
-        Not a member?
-        <a onClick={handleLogin}>signup now</a>
-      </div>
-      <div>
-      <div style={{color: "#595959"}}>
-      Are u admin?
-      </div>
-      <Link to='/adminlogin' style={{textDecoration: "none", }}>Admin</Link>
+        Are u Organizer
+        <a onClick={handleLogin}>Organizer</a>
       </div>
     </form>
   </div>
 </>
 
-
   );
 }
 
-export default LoginForm;
+export default AdminLoginForm;

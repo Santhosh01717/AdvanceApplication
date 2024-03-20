@@ -3,9 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import EventsList from './EventsList';
 import './AddEvent.css';
+import Nav from './Nav';
 
 function AddEventPage() {
   return (
+    <>
+    <Nav />
     <div className="add-event-container">
       <div className="add-event-title">Make 40% payment</div>
       <form className="add-event-form">
@@ -24,6 +27,7 @@ function AddEventPage() {
       
       {/* <EventsList events={events} /> */}
     </div>
+    </>
   );
 }
 

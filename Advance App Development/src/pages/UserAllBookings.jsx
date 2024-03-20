@@ -1,8 +1,8 @@
-// MyBookings.js
-
 import React from 'react';
 import './AllBookings.css';
 import { useNavigate } from 'react-router-dom';
+import AdminSidebar from './AdminSidebar';
+import Nav from './Nav';
 
 function AllBookings() {
   // Sample data for bookings
@@ -13,7 +13,7 @@ function AllBookings() {
       userName: 'John Doe',
       submissionDate: '2024-03-20',
       eventDate: '2024-03-25',
-      description: 'Lorem ipsum dolor sit amet',
+      description: 'event1',
       bookingStatus: 'Pending',
       eventType: 'Event A',
       headCount: 5,
@@ -25,7 +25,7 @@ function AllBookings() {
       userName: 'Alice Smith',
       submissionDate: '2024-03-22',
       eventDate: '2024-03-28',
-      description: 'Sed do eiusmod tempor.',
+      description: 'event2',
       bookingStatus: 'Confirmed',
       eventType: 'Event B',
       headCount: 3,
@@ -48,9 +48,10 @@ function AllBookings() {
 
   return (
     <>
+    <Nav />
       <div className="t-container">
         <div className='header'>
-          <h2>All Bookings</h2>
+          <h2>My Bookings</h2>
         </div>
 
         <table className="booking-table">

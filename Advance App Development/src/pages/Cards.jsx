@@ -29,19 +29,19 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src="https://images.pexels.com/photos/348517/pexels-photo-348517.jpeg?auto=compress&cs=tinysrgb&w=600"
-              text='We leverage cutting-edge technology and creative strategies to deliver engaging and interactive corporate events that leave a lasting impression. Whether its incorporating virtual elements, gamification, or experiential activations, we keep attendees captivated and connected throughout the event.'
+              text='We leverage cutting-edge technology and creative strategies to deliver engaging and interactive corporate events that leave a lasting impression.'
               // label='Tractor'
               // path='/tractorloan'
             />
             <CardItem
               src="https://images.pexels.com/photos/7648505/pexels-photo-7648505.jpeg?auto=compress&cs=tinysrgb&w=600"
-              text='We understand the importance of measurable results and strive to maximize the return on investment (ROI) for every corporate event. Through strategic planning, data-driven insights, and post-event analysis, we help you achieve your business objectives and drive tangible outcomes.'
+              text='We understand the importance of measurable results and strive to maximize the return on investment (ROI) for every corporate event.'
               // label='Used Car'
               // path='/products'
             />
             <CardItem
               src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600"
-              text='With a network of trusted partners and vendors worldwide, we have the capability to execute corporate events of any scale and complexity, no matter where your business takes you. Our local expertise ensures seamless operations and cultural sensitivity in any location.'
+              text='With a network of trusted partners and vendors worldwide, we have the capability to execute corporate events of any scale and complexity, no matter where your business takes you.'
               // label='Commercial car'
               // path='/sign-up'
             />

@@ -46,9 +46,9 @@ const Nav = () => {
       <nav className={sidebarActive ? 'active' : ''}>
         <div className={`nav-bar ${sidebarActive ? 'active' : ''}`}>
           <i className='bx bx-menu sidebarOpen' onClick={toggleSidebar}></i>
+            <h4 style={{color: "white",fontWeight: "1000",fontSize: "30px"}}>EventPro</h4>
           <span className='logo navLogo'>
           {/* <img style={{width: "70px", height: "auto", marginRight: "5px",marginTop: "-30px"}} src={logo}></img> */}
-            <a href='#'>Event     </a>
           </span>
 
           <div className='menu'>
@@ -85,6 +85,16 @@ const Nav = () => {
               <li>
               <Link to="/paymentlist">
                 <a>Payment</a>
+                </Link>
+              </li>
+              <li>
+              <Link to="/adminhome">
+                <a>Admin</a>
+                </Link>
+              </li>
+              <li>
+              <Link to="/login">
+                <a>Logout</a>
                 </Link>
               </li>
             </ul>

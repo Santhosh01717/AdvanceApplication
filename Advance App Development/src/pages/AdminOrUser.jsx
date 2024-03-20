@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const ChooseRolePage = () => {
     const nav = useNavigate();
   const handleAdminClick = () => {
-    nav("/login")
+    nav("/adminlogin")
     console.log('Admin page selected');
   };
 

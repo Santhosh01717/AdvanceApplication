@@ -18,11 +18,13 @@ function AdminSidebar() {
         <div className="line"></div>
         <div className="line"></div>
       </div>
-      <Link to="/hh">Home</Link>
-      <Link to="/dashboard">Dashboard</Link>
+      <Link to="/adminhome">Home</Link>
+      <Link to="/admindashboard">Dashboard</Link>
       <Link to="/view">All Events</Link>
       <Link to="/add">Add Events</Link>
       <Link to="/allbookings">All Bookings</Link>
+      <Link to="/home">Organizer</Link>
+      <Link to="/login">Logout</Link>
     </div>
   );
 }
