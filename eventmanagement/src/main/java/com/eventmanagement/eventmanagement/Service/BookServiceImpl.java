@@ -31,7 +31,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book saveBook(Book book) {
-        System.out.println(book.getUsername());
         return bookRepository.save(book);
     }
 
